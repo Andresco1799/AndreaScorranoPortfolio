@@ -152,13 +152,13 @@
   <!-- Blocco destro: descrizione + menu -->
   <div class="text-block right">
     <p>
-He holds a Bachelor’s degree in Industrial Design from the University
+Andrea Scorrano holds a Bachelor’s degree in Industrial Design from the University
  of Florence and is currently completing a Master’s in Interaction & Experience 
  Design at the University of the Republic of San Marino.
     </br>
         </br>
 
-He believes that design cannot exist without being interdisciplinary. 
+He believes that Design cannot exist without being interdisciplinary. 
 By combining communication, web and visual design, media, photography, research, and interaction, 
 his work aims to make design as useful and effective as possible. Guided by an ecological approach, 
 he seeks to create systems that connect disciplines, regenerate the planet, and open up new forms of experience.
@@ -1437,7 +1437,7 @@ The project developed the visual identity of PLOT Festival
 
 <!-- LAVORO Progetto Quattro -->
 <div class="work-item">
-  <a href="#" class="work-link">Heartease</a>
+  <a href="#" class="work-link">Heartsease</a>
   <span class="work-type">Product & Physical Computing</span>
 </div>
 
@@ -1547,5 +1547,106 @@ The project developed the visual identity of PLOT Festival
 
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+<div id="mobile-block" style="display:none;">
+  <div class="mobile-message">
+    <div class="pixel-face">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="mouth"></div>
+    </div>
+    <p>Sorry, this site can only be viewed on desktop.</p>
+  </div>
+</div>
+
+<script>
+  function checkMobile() {
+    if (window.innerWidth < 1024) {
+      document.getElementById("mobile-block").style.display = "flex";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.getElementById("mobile-block").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  }
+  checkMobile();
+  window.addEventListener("resize", checkMobile);
+</script>
+
+<style>
+#mobile-block {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 99999;
+  font-family: "Courier New", monospace;
+  padding: 2rem;
+}
+
+.mobile-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centra faccina e testo */
+  justify-content: center;
+}
+
+.pixel-face {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #111;
+  border: 2px solid #fff;
+  image-rendering: pixelated;
+  margin-bottom: 1rem;
+}
+
+.pixel-face .eye {
+  width: 6px;
+  height: 6px;
+  background: white;
+  position: absolute;
+  top: 8px;
+}
+
+.pixel-face .eye.left { left: 8px; }
+.pixel-face .eye.right { right: 8px; }
+
+.pixel-face .mouth {
+  width: 20px;
+  height: 6px;
+  border-top: 2px solid white;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.mobile-message p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-width: 260px;
+}
+</style>
+
+
+
+
+
+
+
 </body>
 </html>
